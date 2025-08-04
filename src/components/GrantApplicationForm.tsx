@@ -211,7 +211,7 @@ const GrantApplicationForm: React.FC = () => {
 
       // Success feedback
       setSubmitMessage(
-        `Application submitted successfully! Application ID: ${data.id}.`
+        `Application submitted successfully!`
       );
 
       // Reset form after successful submission
