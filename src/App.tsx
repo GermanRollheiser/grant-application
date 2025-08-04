@@ -29,7 +29,8 @@ function App() {
   // Effect hook to handle initial authentication state and email verification
   useEffect(() => {
     // Check if user was redirected after email verification
-    const isVerifiedRedirect = window.location.search.includes("verified=true");
+  const urlParams = new URLSearchParams(window.location.search);
+  const isVerifiedRedirect = urlParams.get("verified") === "true";
 
     // Handle email verification redirect
     if (isVerifiedRedirect) {
