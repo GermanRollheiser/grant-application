@@ -196,7 +196,7 @@ const GrantApplicationForm: React.FC = () => {
       };
 
       // Insert into grant_applications table with RLS protection
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from("grant_applications")
         .insert(applicationData)
         .select()
