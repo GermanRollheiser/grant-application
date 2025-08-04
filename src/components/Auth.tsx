@@ -31,6 +31,9 @@ export const Auth = () => {
       const { data, error: signUpError } = await supabase.auth.signUp({
         email,
         password,
+        options: {
+          emailRedirectTo: 'https://webform-ivory.vercel.app/?verified=true'
+        }
       });
       // Handle sign up errors
       if (signUpError) {
